@@ -4,7 +4,7 @@ var bb= require('express-busboy')
 var app = express();
 var x = [Date.now()];
 x = x.toString().split('');
-x=x[x.length-2]
+x=x[x.length-2];
 
 var i=3;
 var v='Pas encore de resultat';
@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 		i+'essais restants'+'<br />'+
 		v+
 		'</body>');
- });
+});
 
 bb.extend(app)
 
@@ -45,7 +45,7 @@ app.post('/',function(req,res){
 		if(i==0){
 			v='Vous avez perdu'
 			i=3
-		}
+		};
 		res.redirect('/')
 	}
 	retrieve();
